@@ -29,9 +29,9 @@ const OAuth = () => {
                     })
 
                 }  
+                toast.success('Logged in successfully')
                 navigate('/')      
             } catch (error) {
-                console.log(error)
                 toast.error('Something went wrong')
             }       
         }
