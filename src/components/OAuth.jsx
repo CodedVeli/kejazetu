@@ -18,7 +18,7 @@ const OAuth = () => {
                 const result = await signInWithPopup(auth, provider)
                 const user = result.user
 
-                const docRef = doc(db, 'users, user.id')
+                const docRef = doc(db, 'users', user.uid)
                 const docSnap = await getDoc(docRef)
 
                 if(!docSnap.exists()) {
@@ -31,6 +31,7 @@ const OAuth = () => {
                 }  
                 navigate('/')      
             } catch (error) {
+                console.log(error)
                 toast.error('Something went wrong')
             }       
         }
