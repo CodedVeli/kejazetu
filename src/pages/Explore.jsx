@@ -5,7 +5,7 @@ import Slider from "../components/Slider";
 
 const Explore = () => {
     return (
-        <div className="explore">
+        <div className="explore overflow-scroll">
            <header>
             <p className="pageHeader">Explore</p>
            </header>
